@@ -29,11 +29,6 @@ A Service to handle delivery order management and tracking.
 - Go to application.properties and update the datasource to this line to use local mysql
 ```spring.datasource.url=jdbc:mysql://host.docker.internal:3306/deliverymgmt```
 - Update mysql username and password if required
-- mvn clean package -DskipTests
-- Once the build is successful, change the name of the .jar file in target folder one matching within the dockerfile ```deliverymgmt-1```
-- docker build -t deliverymgmt-app .
-- docker run -d --name deliverymgmt-app -p 8080:8080 deliverymgmt-app
-- Go to http://localhost:8080/actuator after starting the application (wait for a few seconds)
 - Make sure the mysql service is running on port 3306 on your local machine and credentials are valid
 
 ## Concurrency, Multithreaded Environment and Optimizations
